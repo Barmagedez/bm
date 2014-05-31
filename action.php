@@ -57,7 +57,7 @@ function onFileSelected() {
 }
 ?>
 <hr>
-<br>
+
 <a href='' name='lo'></a>
 <table class='table table-bordered'>
 

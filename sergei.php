@@ -1,5 +1,5 @@
 
-<form action='' method='post'>
+<form action='' style='background-color: red; width: 90%; margin: 0 auto;' method='post'>
 <?
 if ($_POST['tip']) {
 	$tip=$_POST['tip'];
@@ -12,8 +12,8 @@ if ($_POST['tip']) {
 	}
 }
 ?>
-Сколько баров: 
-<select name='tip' class='form-control' style='width:60%'>
+Сколько бароsdfsdfsdfsd111в: 
+<select name='tip' class='form-control' style="width: 90%; margin: 0 auto;">
 <option>3</option>
 <option>4</option>
 </select> 

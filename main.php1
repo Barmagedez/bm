@@ -42,9 +42,14 @@ padding-top: 10px;
 margin: 0 auto;
 width: 90%;
 padding-top: 15px;
-}</style>
+}
+
+
+	
+	</style>
 <div class="godrink">
-<img style='width:100%' src='/files/img1.png'>
+<div class="drinkheader"></div>
+<img style='width:100%' src=''>
 <div class="drinkform">
 <div class="esheodindiv">
 Привет! <?=$user['fio']; ?> <a href='?exit=1'>ВЫХОД</a>
