@@ -24,11 +24,20 @@ margin: 0 auto;
 width: 530px;
 padding-top: 10px;
 }
+
+.esheodindiv{
+margin: 0 auto;
+width: 540px;
+padding-top: 15px;
+}
+
+
 	
 	</style>
 <div class="godrink">
 <img style='width:100%' src='/files/img1.png'>
 <div class="drinkform">
+<div class="esheodindiv">
 <form action='' method='post'>
 <?
 if ($_POST['tip']) {
@@ -43,13 +52,13 @@ if ($_POST['tip']) {
 }
 ?>
 Сколько баров: 
-<select name='tip' class='form-control'>
+<select name='tip' class='form-control' style='width:60%'>
 <option>3</option>
 <option>4</option>
 </select> 
 <br><br>
 <input type='submit' class='btn btn-primary' value='Построить маршрут'>
 </form>
-</div>
+</div></div>
 <img style='width:100%' src='/files/img2.png'>
 </div>

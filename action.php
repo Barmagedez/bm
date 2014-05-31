@@ -32,7 +32,7 @@ if ($_GET['step'] == $route['counts']) {
 	<h1>Игра началась!  загружайте чеки из баров!!!!</h1>
 <?=(int)$_GET['step']?>/<?=$route['counts']?>
 <img src='/img_maps/<?=$route['id']?>_<?=(int)$_GET['step'];?>.jpg' style='width:100%'>
-<form action='' method='post' enctype="multipart/form-data">
+<form action='#lo' method='post' enctype="multipart/form-data">
 <?
 //print_R($_FILES);
 if ($_FILES['check']['name']) {
@@ -58,6 +58,7 @@ function onFileSelected() {
 ?>
 <hr>
 <br>
+<a href='' name='lo'></a>
 <table class='table table-bordered'>
 
 <?
@@ -65,12 +66,21 @@ $sql = "select * from checkpoints where route = '".$route['id']."' AND user = '"
 $q = q($sql);
 $t=0;
 while ($r=r($q)) {
+$t++;
 ob_start();
-
-if ($t['']) {
-
-}
-
+?>
+	<tr>
+	<td><?=$i;?></td>
+	<td><?=$r['title'];?></td>
+	<?
+	$sql = "select * from checkpoints where route = '".$route['id']."' ORDER BY id DESC";
+	$q1=q($sql);
+	$r2 = r($q1);
+	?>
+	<td><? if ($_GET['step'] > $i) { echo "Пройдено за ".time()-$r2['data']; } else {echo $r['status'];} ?></td>
+	</tr>
+<?
+$tr[$t] = ob_get_clean();
 }
 
 $sql = "select * from bars WHERE id IN (".$route['bvars'].")";
@@ -81,6 +91,7 @@ while ($r=r($q)) {
 	$i++;
 	if ($tr[$i])  { echo $tr; break; }
 	?>
+	<tr>
 	<td><?=$i;?></td>
 	<td><?=$r['title'];?></td>
 	<?
@@ -88,7 +99,7 @@ while ($r=r($q)) {
 	$q1=q($sql);
 	$r2 = r($q1);
 	?>
-	<td><? if ($_GET['step'] > $i) { echo "Пройдено за ".time()-$r2['data']; } else {echo $r['status'];} ?></td>
+	<td><? if ($_GET['step'] > $i) { echo $r['status'];} ?></td>
 	</tr>
 	<?
 }
