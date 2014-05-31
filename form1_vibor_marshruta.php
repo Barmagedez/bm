@@ -1,24 +1,9 @@
-<form action='' method='post'>
 <?
-if ($_POST['tip']) {
-	$tip=$_POST['tip'];
-	if ($tip == 3) {
-		?>
-		<script>
-		window.location='/?route=3'
-		</script>
-		<?
-	}
-}
+include("sergei.php");
 ?>
-Сколько баров: 
-<select name='tip' class='form-control'>
-<option>3</option>
-<option>4</option>
-</select> <br><br>
-<input type='submit' class='btn btn-primary' value='Построить маршрут'>
-</form>
+
 <h3 onclick='$("#dsf").toggle()' style='text-decoration:underline'>Авторские маршруты (кликай)</h3>
+
 <div id='dsf' style='display:none'>
 <span><b>Популярные маршруты возле вас (Москва)</b> - для вас мы составили несколько наиболее прикольных маршрутов доступных к вашему местоположению</span> 
 

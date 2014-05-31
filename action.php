@@ -63,25 +63,23 @@ function onFileSelected() {
 <?
 $sql = "select * from checkpoints where route = '".$route['id']."' AND user = '".$user['id']."' order by id desc";
 $q = q($sql);
+$t=0;
 while ($r=r($q)) {
-?>
-<tr>
-<td>
-<img src='<?=$r['screen']?>' style='width:100px'>
-</td>
-<td>
-Супербар 1
-</td>
-<td></td>
-</tr><?
+ob_start();
+
+if ($t['']) {
+
+}
+
 }
 
 $sql = "select * from bars WHERE id IN (".$route['bvars'].")";
-echo $sql;
+//echo $sql;
 $q=q($sql);
 $i=0;
 while ($r=r($q)) {
 	$i++;
+	if ($tr[$i])  { echo $tr; break; }
 	?>
 	<td><?=$i;?></td>
 	<td><?=$r['title'];?></td>
