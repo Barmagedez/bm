@@ -31,20 +31,3 @@ while ($r=r($q)) {
 </table>
 
 </form>
-<hr> <!-- 
-<span>Популярные маршруты возле вас (Москва)</span> 
-<?
-$sql = 'select * from routes';
-$q=q($sql);
-
-while ($r=r($q)) {
-	?>
-	<h1>"<?=$r['title']?>"</h1>
-	<br>
-	<?=$r['descr']?>
-	<?
-}
-
-?> <input type='submit' class='btn btn-primary' onclick='alert("ок. Придумай ник и введи его в форму выше");' value='Я могу!'>
-
--->
