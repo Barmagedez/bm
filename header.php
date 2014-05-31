@@ -13,10 +13,7 @@
     <![endif]-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<style>
-	body {
-	font-size:125%!important;
-	color:black!important;
-	}
+
 	</style>
   </head>
-  <body style='margin:1%;'>
+  <body>

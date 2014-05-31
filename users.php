@@ -7,7 +7,7 @@ if ($_GET['exit']) {
 	setcookie("id");
 }
 
-$sql = "SELECT * FROM users WHERE id = '".$_COOKIE['id']."'";
+$sql = "SELECT * FROM users WHERE id = '".(int)$_COOKIE['id']."'";
 $q = mysql_query($sql);
 
 if (mysql_num_rows($q)) {$user=r($q);}
@@ -21,7 +21,7 @@ if ($_POST['fio']) {
 		setcookie("id",mysql_insert_id());
 			?>
 			<script>
-			windows.location='/';
+			window.location='/';
 			</script>
 			<?
 	} else {

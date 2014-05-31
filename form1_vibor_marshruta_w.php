@@ -17,14 +17,27 @@ background: url(/files/img3.png);
 .sliderform {
 margin: 0 auto;
 width: 436px;
-padding-top: 35px;
-}		
+padding-top: 20px;
+}	
+
+.lineform {
+margin: 0 auto;
+width: 530px;
+padding-top: 10px;
+}
+	
 	</style>
 <div class="godrink">
 <img style='width:100%' src='/files/img1.png'>
 <div class="drinkform">
 <div class="sliderform">
 <img style='width:436px' src='/files/map1.png'>
+</div>
+<div class="lineform">
+<img style='width:530px' src='/files/img4.png'>
+</div>
+<div class="lineform">
+<img  src='/files/img5.png'>
 </div>
 </div>
 <img style='width:100%' src='/files/img2.png'>
