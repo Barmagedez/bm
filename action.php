@@ -63,33 +63,37 @@ function onFileSelected() {
 
 <?
 $sql = "select * from checkpoints where route = '".$route['id']."' AND user = '".$user['id']."' order by id desc";
+///echo $sql;
 $q = q($sql);
 $t=0;
+$array = array("disco90","disco90");
 while ($r=r($q)) {
 $t++;
 ob_start();
 ?>
 	<tr>
-	<td><?=$i;?></td>
-	<td><?=$r['title'];?></td>
+	<td><?=$t;?></td>
+	<td><?=$array[$t];?></td>
 	<?
 	$sql = "select * from checkpoints where route = '".$route['id']."' ORDER BY id DESC";
 	$q1=q($sql);
 	$r2 = r($q1);
 	?>
-	<td><? if ($_GET['step'] > $i) { echo "Пройдено за ".time()-$r2['data']; } else {echo $r['status'];} ?></td>
+	<td><?  echo "Пройдено за ".(time()-$r2['data']); ?></td>
 	</tr>
 <?
-$tr[$t] = ob_get_clean();
+
+$tr[$t] =  ob_get_clean();
 }
 
 $sql = "select * from bars WHERE id IN (".$route['bvars'].")";
 //echo $sql;
 $q=q($sql);
 $i=0;
+
 while ($r=r($q)) {
 	$i++;
-	if ($tr[$i])  { echo $tr; break; }
+	if ($tr[$i])  { echo $tr[$i]; continue; } //логика второго уровня
 	?>
 	<tr>
 	<td><?=$i;?></td>
