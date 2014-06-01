@@ -1,9 +1,9 @@
 <?
 include("sergei.php");
 ?>
-
-<h3> <!--onclick='$("#dsf").toggle()' style='text-decoration:underline'--><a href="#">Авторские маршруты (кликай)</a></h3>
-
+<div style="width: 80%; margin: 0 auto; height: 5%;">
+<h4> <!--onclick='$("#dsf").toggle()' style='text-decoration:underline'--><a href="#" style="a: #ddd300; color: #ddd300; a:hover: #ddd300; ">Авторские маршруты (кликай)</a></h4>
+</div>
 <div id='dsf' style='display:none'>
 <span><b>Популярные маршруты возле вас (Москва)</b> - для вас мы составили несколько наиболее прикольных маршрутов доступных к вашему местоположению</span> 
 
