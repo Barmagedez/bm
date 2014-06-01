@@ -10,7 +10,7 @@ if (!$_GET['route']) die('Выберите или постройте маршрут!');
 <?
 if ($_GET['step'] == $route['counts']) {
 	?>
-	<img src='/img_maps/<?=$route['id']?>_<?=(int)$_GET['step'];?>.jpg' style='width:100%'>
+	<img src='/img_maps/<?=$route['id']?>_<?=(int)$_GET['step'];?>.jpg' style='width:100%' class="drinkbutton">
 	<h2>ПОЗДРАВЛЯЮ ВЫ ПРООШЛИ МАРШРУТ ЗА 
 	
 	<?
@@ -31,7 +31,7 @@ if ($_GET['step'] == $route['counts']) {
 	?>
 	<h1>Игра началась!  загружайте чеки из баров!!!!</h1>
 <?=(int)$_GET['step']?>/<?=$route['counts']?>
-<img src='/img_maps/<?=$route['id']?>_<?=(int)$_GET['step'];?>.jpg' style='width:100%'>
+<img src='/img_maps/<?=$route['id']?>_<?=(int)$_GET['step'];?>.jpg' style='width:100%' class="drinkbutton">
 <form action='#lo' method='post' enctype="multipart/form-data">
 <?
 //print_R($_FILES);
@@ -66,8 +66,8 @@ $sql = "select * from checkpoints where route = '".$route['id']."' AND user = '"
 ///echo $sql;
 $q = q($sql);
 $t=0;
-$array = array("disco90","disco90");
-while ($r=r($q)) {
+$array = array("disco90","disco90","Джон Дон","Big Boobs Bar","Бар Пьяная Всезнайка");
+while ($r2=r($q)) {
 $t++;
 ob_start();
 ?>
@@ -75,11 +75,11 @@ ob_start();
 	<td><?=$t;?></td>
 	<td><?=$array[$t];?></td>
 	<?
-	$sql = "select * from checkpoints where route = '".$route['id']."' ORDER BY id DESC";
+	$sql = "select * from checkpoints where route = '".$route['id']."' AND user = '".$user['id']."' ORDER BY id DESC LIMIT ".($t-1).",1";
 	$q1=q($sql);
 	$r2 = r($q1);
 	?>
-	<td><?  echo "Пройдено за ".(time()-$r2['data']); ?></td>
+	<td><?  echo "Пройдено за ".(time()-$r2['data']); ?> сек</td>
 	</tr>
 <?
 

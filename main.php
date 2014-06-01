@@ -14,10 +14,16 @@ background: url(/files/img1.png) repeat-x;
 
 
 }
+.drinkfooter {
+height: 41px;
+width: 100%;
+background: url(/files/img2.png) repeat-x;
 
+
+}
 		
 .drinkform {
-height: 825px;
+height: 100%;
 width: 100%;
 background: url(/files/img3.png)  no-repeat center center fixed;
 -webkit-background-size: cover;
@@ -42,9 +48,20 @@ padding-top: 10px;
 margin: 0 auto;
 width: 90%;
 padding-top: 15px;
-}</style>
+
+}
+
+.drinkbutton {
+width: 33%;
+float: left;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;}
+
+</style>
 <div class="godrink">
-<img style='width:100%' src='/files/img1.png'>
+<div class="drinkheader"></div>
 <div class="drinkform">
 <div class="esheodindiv">
 Привет! <?=$user['fio']; ?> <a href='?exit=1'>ВЫХОД</a>
@@ -57,6 +74,7 @@ include("action.php");
 }
 ?>
 </div>
-</div></div>
-<img style='width:100%' src='/files/img2.png'>
+</div>
+<div class="drinkfooter"></div>
+
 </div>

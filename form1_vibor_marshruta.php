@@ -18,8 +18,8 @@ include("sergei.php");
 
 		while ($r=r($q)) {
 			?>
-			<div class="swiper-slide" style='width:100%;float:left;padding:5px;text-align:center'>
-			<h1>"<?=$r['title']?>"</h1>
+			<div class="swiper-slide" style='width:33%; float:left;padding:5px;text-align:center'>
+			<h4>"<?=$r['title']?>"</h4>
 			<br>
 			<?=$r['descr']?>
 			<br>
@@ -53,8 +53,13 @@ body {
 
 }
 .swiper-container {
-  height: 300px;
-  width: 320px;
+
+ width: 100%;
+}
+
+.swiper-wrapper {
+
+ width: 300%;
 }
 .content-slide {
   padding: 20px;
@@ -84,7 +89,13 @@ body {
 .swiper-active-switch {
   background: #fff;
 }
-  </style>
+.sliderbutton {
+float: left;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;}
+
   </style>
   <script src="swiper/demos/js/jquery-1.10.1.min.js"></script>
   <script src="swiper/demos/js/idangerous.swiper-2.1.min.js"></script>
