@@ -24,7 +24,7 @@ background: url(/files/img2.png) repeat-x;
 		
 .drinkform {
 height: 100%;
-width: 100%;
+width: 90%;
 background: url(/files/img3.png)  no-repeat center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
@@ -96,10 +96,10 @@ box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
 <script src="/files/selectnav.min.js"></script>
 <script>selectnav('nav'); </script>
 <div class="godrink">
-<div class="drinkheader"><ul class="nav navbar-nav navbar-right" style="/* background-color: #ddd300; */ li:hover: #fff; "><li class="dropdown">
+<div class="drinkheader"><ul class="nav navbar-nav navbar-right" style="/* background-color: #ddd300; */ li:hover: #fff;  margin-right: 2%; "><li class="dropdown">
               <a href="#" class="dropdown-toggle" style="background-color: #ddd300; margin-top: 50px; padding-top: 0px;
 padding-bottom: 0px; height: 45px;  height: 45px; float: right;" data-toggle="dropdown"><img src='/files/img6.gif' style=" height: 45px;"> <b class="caret"></b></a>
-              <ul class="dropdown-menu" role="menu" style="background-color: #ddd300;">
+              <ul class="dropdown-menu" role="menu" style="background-color: #ddd300; ">
                 <li><a href="#"></a></li>
                 <li><a href="#">Мой профиль</a></li>
 				<li><a href="#">Мой профиль</a></li>
@@ -110,12 +110,11 @@ padding-bottom: 0px; height: 45px;  height: 45px; float: right;" data-toggle="dr
             </li></ul></div>
 <div class="drinkform">
 <div class="esheodindiv">
-<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-<ul class="nav navbar-nav navbar-left">
-            <li class="active">Привет! <?=$user['fio']; ?> </li></ul>
+
+<h1>Привет! <?=$user['fio']; ?> </h1>
 
 
-			</div>
+			
 
 
 
