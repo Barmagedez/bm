@@ -104,7 +104,7 @@ box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
             <li class="active">Привет! <?=$user['fio']; ?> </li></ul>
 
 <ul class="nav navbar-nav navbar-right"><li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Меню <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src='/files/img6.gif' width="50%"> <b class="caret"></b></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#"></a></li>
                 <li><a href="#">Мой профиль</a></li>
