@@ -18,7 +18,7 @@ include("sergei.php");
 
 		while ($r=r($q)) {
 			?>
-			<div class="swiper-slide" style='width:33%; float:left;padding:5px;text-align:center'>
+			<div class="swiper-slide" style=' float:left;padding:5px;text-align:center'>
 			<h4>"<?=$r['title']?>"</h4>
 			<br>
 			<?=$r['descr']?>

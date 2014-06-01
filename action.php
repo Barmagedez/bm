@@ -10,7 +10,7 @@ if (!$_GET['route']) die('Выберите или постройте маршрут!');
 <?
 if ($_GET['step'] == $route['counts']) {
 	?>
-	<img src='/img_maps/<?=$route['id']?>_<?=(int)$_GET['step'];?>.jpg' style='width:100%' class="drinkbutton">
+	<img src='/img_maps/<?=$route['id']?>_<?=(int)$_GET['step'];?>.jpg' style='width:100%'>
 	<h2>ПОЗДРАВЛЯЮ ВЫ ПРООШЛИ МАРШРУТ ЗА 
 	
 	<?
@@ -31,7 +31,7 @@ if ($_GET['step'] == $route['counts']) {
 	?>
 	<h1>Игра началась!  загружайте чеки из баров!!!!</h1>
 <?=(int)$_GET['step']?>/<?=$route['counts']?>
-<img src='/img_maps/<?=$route['id']?>_<?=(int)$_GET['step'];?>.jpg' style='width:100%' class="drinkbutton">
+<img src='/img_maps/<?=$route['id']?>_<?=(int)$_GET['step'];?>.jpg' style='width:100%' >
 <form action='#lo' method='post' enctype="multipart/form-data">
 <?
 //print_R($_FILES);
